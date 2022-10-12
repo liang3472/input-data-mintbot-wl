@@ -79,7 +79,7 @@ const estimateGas = (wallet, data) => {
       const fields = {
         from: address,
         gas: estimatedGas,
-        gasLimit: 500000,
+        gasLimit: 150000,
         maxPriorityFeePerGas: web3.utils.toHex(web3.utils.toWei(String(MAX_PRIORITY_FEE_PER_GAS), 'gwei')),
         maxFeePerGas: web3.utils.toHex(web3.utils.toWei(String(MAX_FEE_PER_GAS), 'gwei')),
         to: CONTRACT,
