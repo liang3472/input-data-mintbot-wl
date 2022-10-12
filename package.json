@@ -1,0 +1,22 @@
+{
+  "name": "input-data-mintbot-wl",
+  "version": "1.0.0",
+  "description": "input data 抢公售机器人",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alch/alchemy-web3": "^1.4.1",
+    "@noble/hashes": "^1.1.2",
+    "@noble/secp256k1": "^1.7.0",
+    "axios": "^0.27.2",
+    "chalk": "^5.0.1",
+    "ethereum-input-data-decoder-without-fs": "^0.3.6",
+    "fs": "^0.0.1-security",
+    "node-schedule": "^2.1.0"
+  }
+}
