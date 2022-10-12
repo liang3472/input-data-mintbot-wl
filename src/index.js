@@ -1,4 +1,5 @@
 import { createAlchemyWeb3 } from '@alch/alchemy-web3';
+import Web3 from 'web3';
 import axios from 'axios';
 import abi from './abi.js';
 import PKS from './pks.js';
@@ -8,7 +9,7 @@ import schedule from 'node-schedule';
 // ******************** 注意修改这块 ********************
 const CONTRACT = '0x3fb44e80f24789aa5d41b4c14f56940dd11004ab'; // 这里现在是测试合约
 // mint 价格(eth), 注意要根据自己mint的数量去计算
-const PRICE = 0.0001; // 注意了单位是 eth
+const PRICE = 0; // 注意了单位是 eth
 // mint开关函数
 const MAX_PRIORITY_FEE_PER_GAS = 85;
 const MAX_FEE_PER_GAS = 85;
@@ -20,8 +21,8 @@ const JOB_DATE = new Date(
   2022, // 年
   9,    // 月 从 0（1月）到 11（12月）
   12,   // 日
-  2,    // 时(24小时制)
-  29,    // 分
+  22,    // 时(24小时制)
+  0,    // 分
   0);   // 秒
 
 // test测试网， main主网
@@ -66,7 +67,8 @@ if (!ALCHEMY_AK) {
   console.log('请设置alchemy ak');
 }
 console.log(`${RPC_ENV[currENV]}/v2/${ALCHEMY_AK}`);
-const web3 = createAlchemyWeb3(`${RPC_ENV[currENV]}/v2/${ALCHEMY_AK}`);
+// const web3 = createAlchemyWeb3(`${RPC_ENV[currENV]}/v2/${ALCHEMY_AK}`);
+const web3 = new Web3('https://goerli-eth.compound.finance'); // 该节点限制50内没问题
 
 const estimateGas = (wallet, data) => {
   if (!wallet.address || !wallet.pk) {

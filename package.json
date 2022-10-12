@@ -17,6 +17,7 @@
     "chalk": "^5.0.1",
     "ethereum-input-data-decoder-without-fs": "^0.3.6",
     "fs": "^0.0.1-security",
-    "node-schedule": "^2.1.0"
+    "node-schedule": "^2.1.0",
+    "web3": "^1.8.0"
   }
 }
