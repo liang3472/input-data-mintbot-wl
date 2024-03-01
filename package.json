@@ -1,6 +1,6 @@
 {
   "name": "input-data-mintbot-wl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "input data 抢公售机器人",
   "main": "index.js",
   "type": "module",
@@ -8,9 +8,10 @@
     "start": "node ./src/index.js"
   },
   "author": "liang3472",
+  "homepage": "https://github.com/liang3472/input-data-mintbot-wl",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liang3472/input-data-mintbot-wl.git"
+    "url": "https://github.com/liang3472/input-data-mintbot-wl"
   },
   "license": "ISC",
   "dependencies": {
